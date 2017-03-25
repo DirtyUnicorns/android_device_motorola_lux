@@ -51,6 +51,7 @@ void vendor_load_properties()
     std::string carrier = property_get("ro.boot.carrier");
     std::string numsims = property_get("ro.boot.num-sims");
 
+    property_set("ro.telephony.default_network", "9");
     property_set("ro.product.model", sku.c_str());
 
     if (atoi(numsims.c_str()) >= 2)
